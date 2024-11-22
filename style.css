@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.faq-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.active::before,
+.active::after {
+  font-family: "Material symbols outlined";
+  content: "chat_bubble";
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+h3 {
+  margin: 0 35px 0 0;
+}
+
+p {
+  display: none;
+}
+
+.active p {
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+button :nth-child(1) {
+  display: block;
+}
+
+button :nth-child(2) {
+  display: none;
+}
+
+.active button :nth-child(1) {
+  display: none;
+}
+
+.active button :nth-child(2) {
+  display: block;
+}
+
+.active button {
+  background-color: #9fa4a8;
+  color: #fff;
+}
